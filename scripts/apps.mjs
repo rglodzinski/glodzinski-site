@@ -30,15 +30,24 @@ export const APPS = [
   {
     slug: "combino",
     icon: "/assets/apps/combino.png",
-    platforms: "Android · iOS",
+    platforms: "iOS",
     name: "Combinô",
     tag: "Família",
     description: "Rotinas, combinados, recompensas e tempo de tela das crianças, organizados pela família num só lugar.",
-    en: { tag: "Family", description: "Kids' routines, agreements, rewards and screen time, organized by the whole family in one place." },
-    es: { tag: "Familia", description: "Rutinas, acuerdos, recompensas y tiempo de pantalla de los niños, organizados por la familia en un solo lugar." },
+    deletion: "No app, em Mais › Conta › Excluir minha conta. Se não conseguir entrar, peça pelo formulário de contato ou por e-mail. Passo a passo em combino.app.br/excluir-conta.",
+    en: {
+      tag: "Family",
+      description: "Kids' routines, agreements, rewards and screen time, organized by the whole family in one place.",
+      deletion: "In the app, under Mais › Conta › Excluir minha conta. If you can't sign in, ask through the contact form or by email. Step by step at combino.app.br/excluir-conta.",
+    },
+    es: {
+      tag: "Familia",
+      description: "Rutinas, acuerdos, recompensas y tiempo de pantalla de los niños, organizados por la familia en un solo lugar.",
+      deletion: "En la app, en Mais › Conta › Excluir minha conta. Si no puedes entrar, pídelo por el formulario de contacto o por correo. Paso a paso en combino.app.br/excluir-conta.",
+    },
+    // Domínio próprio, no Vercel (repo Combino, apps/web).
+    ownDomain: "combino.app.br",
     privacyPath: "/privacidade/",
-    live: false,
-    fallback: { site: "https://combino-web.vercel.app", privacy: "https://combino-web.vercel.app/privacidade/" },
   },
   {
     slug: "farmafigurinha",

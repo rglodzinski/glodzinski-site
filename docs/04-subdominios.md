@@ -11,9 +11,9 @@ site institucional só aponta para lá.
 flowchart TB
     root["glodzinski.dev.br<br><small>repo glodzinski-site</small>"]
     root --> lt["limpatudo.glodzinski.dev.br<br><small>repo LimpaTudo · site/</small>"]
-    root --> cb["combino.glodzinski.dev.br<br><small>repo Combino</small>"]
     root --> ff["farmafigurinha.glodzinski.dev.br<br><small>repo do app</small>"]
     root -.domínio próprio.-> ti["tirei.app.br"]
+    root -.domínio próprio.-> cb["combino.app.br<br><small>repo Combino · apps/web · Vercel</small>"]
     root -.cliente.-> ip["iprahoje.com.br"]
     root -.cliente.-> lx["luxbapp.com"]
 ```
@@ -22,13 +22,13 @@ flowchart TB
 
 - O site muda junto com o app (features, changelog, downloads, política).
 - Cada app escolhe sua stack (o Limpa Tudo usa gerador próprio em `site/`;
-  Combinô usa Next/Vercel).
+  o Combinô, um build estático em `apps/web`, na Vercel).
 - O institucional fica pequeno e estável.
 
 **Exceções:**
 
-- **Domínio próprio:** o Tirei! continua em `tirei.app.br` (`ownDomain` em
-  `scripts/apps.mjs`).
+- **Domínio próprio:** o Tirei! fica em `tirei.app.br` e o Combinô em
+  `combino.app.br` (`ownDomain` em `scripts/apps.mjs`).
 - **Projetos de clientes** (iPraHoje, LuxB): não usam o domínio da Glodzinski
   e aparecem só como link para o site do cliente.
 
@@ -37,9 +37,9 @@ flowchart TB
 | App | Subdomínio planejado | DNS | Endereço atual (`fallback`) |
 |---|---|---|---|
 | Limpa Tudo | `limpatudo.glodzinski.dev.br` | ✅ no ar (HTTPS) | — (`live: true`; política em `/privacidade.html#limpa-tudo`) |
-| Combinô | `combino.glodzinski.dev.br` | ⏳ | `combino-web.vercel.app` |
 | FarmaFigurinha | `farmafigurinha.glodzinski.dev.br` | ⏳ | `auracopa26.app` |
 | Tirei! | — (domínio próprio) | ✅ | `tirei.app.br` |
+| Combinô | — (domínio próprio) | ⏳ DNS no Registro.br | `combino.app.br` (Vercel; `combino-web.vercel.app` continua respondendo) |
 
 ## Como ativar um subdomínio
 
@@ -53,7 +53,7 @@ flowchart LR
 
 1. **DNS** (no provedor de `glodzinski.dev.br`), conforme o host:
    - GitHub Pages: `CNAME limpatudo → rglodzinski.github.io.`
-   - Vercel: `CNAME combino → cname.vercel-dns.com.`
+   - Vercel (subdomínio): `CNAME <slug> → cname.vercel-dns.com.`
 2. **Host do app:**
    - GitHub Pages: arquivo `CNAME` com `limpatudo.glodzinski.dev.br` no artefato
      publicado (no Limpa Tudo, via `SITE_URL` no `pages.yml`) e “Enforce HTTPS”;
