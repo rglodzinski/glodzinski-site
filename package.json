@@ -1,0 +1,14 @@
+{
+  "name": "glodzinski-site",
+  "private": true,
+  "type": "module",
+  "description": "Site institucional da Glodzinski Tecnologia (estático, GitHub Pages).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "pix": "node scripts/gen-pix.mjs && node scripts/build.mjs",
+    "dev": "python3 -m http.server 8080"
+  },
+  "devDependencies": {
+    "qrcode": "1.5.4"
+  }
+}
