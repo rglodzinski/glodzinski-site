@@ -1,19 +1,20 @@
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<a class="skip" href="#conteudo">{{t.skip}}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="/" aria-label="Glodzinski Tecnologia, página inicial">{{logo}}</a>
-    <nav class="nav" id="nav" aria-label="Principal">
-      <a href="/#apps">Aplicativos</a>
-      <a href="/#clientes">Clientes</a>
-      <a href="/privacidade.html">Privacidade</a>
-      <a href="/apoie.html">Apoie</a>
-      <a href="/#contato">Contato</a>
+    <a class="logo" href="{{href:home}}" aria-label="{{t.logoLabel}}">{{logo}}</a>
+    <nav class="nav" id="nav" aria-label="{{t.navLabel}}">
+      <a href="{{href:home}}#apps">{{t.apps}}</a>
+      <a href="{{href:home}}#clientes">{{t.clients}}</a>
+      <a href="{{href:privacy}}">{{t.privacy}}</a>
+      <a href="{{href:support}}">{{t.support}}</a>
+      <a href="{{href:home}}#contato">{{t.contact}}</a>
     </nav>
-    <button class="icon-btn theme-toggle" type="button" aria-label="Alternar tema claro ou escuro">
+    {{langSwitch}}
+    <button class="icon-btn theme-toggle" type="button" aria-label="{{t.themeLabel}}">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
     </button>
-    <button class="icon-btn menu-toggle" type="button" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
+    <button class="icon-btn menu-toggle" type="button" aria-label="{{t.menuLabel}}" aria-controls="nav" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
     </button>
   </div>

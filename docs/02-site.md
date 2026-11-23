@@ -48,6 +48,43 @@ flowchart LR
 Não edite o conteúdo entre os marcadores: ele é sobrescrito no build. O HTML
 gerado é commitado, então o GitHub Pages serve tudo sem precisar de CI.
 
+## Idiomas
+
+O site tem três versões: português na raiz, inglês em `/en/` e espanhol em
+`/es/`. Cada página existe nos três idiomas, com nomes próprios:
+
+| Página | pt-BR | en | es |
+|---|---|---|---|
+| Início | `/` | `/en/` | `/es/` |
+| Apoie | `/apoie.html` | `/en/support.html` | `/es/apoyo.html` |
+| Privacidade | `/privacidade.html` | `/en/privacy.html` | `/es/privacidad.html` |
+| Exclusão de dados | `/exclusao-de-dados.html` | `/en/data-deletion.html` | `/es/eliminacion-de-datos.html` |
+
+- **Fonte da verdade:** `scripts/i18n.mjs` tem o mapa de páginas (`PAGES`), os
+  textos dos partials (`T`) e `localize()`, que traduz links internos escritos
+  em português. Os apps têm `en`/`es` em `scripts/apps.mjs`.
+- **Partials** usam `{{t.chave}}` e `{{href:página}}`; o build preenche cada um
+  no idioma da página e gera os `<link rel="alternate" hreflang>` (com
+  `x-default` → inglês) e o seletor PT · EN · ES no cabeçalho.
+- **Idioma do navegador:** na primeira visita, um script no `<head>` leva ao
+  idioma do navegador (pt, en ou es; qualquer outro → en). Não age em robôs de
+  busca (para não esconder as páginas em português do Google), nem mais de uma
+  vez por sessão, nem depois de o visitante escolher um idioma no seletor
+  (guardado em `localStorage.lang`).
+- **Textos do `main.js`** (Pix, validação, mensagem do formulário) seguem o
+  `lang` da página.
+- **Privacidade:** as versões em inglês e espanhol são traduções de cortesia; a
+  em português prevalece (aviso no topo de cada uma). Ao mudar a política,
+  atualizar as três.
+- **Ids das seções** (`#apps`, `#clientes`, `#contato`…) são os mesmos nos três
+  idiomas, para os links gerados funcionarem igual.
+
+## Links externos
+
+O build acrescenta `target="_blank" rel="noopener"` a todo link para outro
+site (inclusive os escritos à mão nas páginas). `mailto:`, `tel:` e links
+internos abrem na mesma aba.
+
 ## Tarefas comuns
 
 ### Adicionar um app próprio
@@ -57,8 +94,9 @@ gerado é commitado, então o GitHub Pages serve tudo sem precisar de CI.
 2. Acrescente um item em `APPS` (`scripts/apps.mjs`): `slug`, `name`, `icon`, `tag`,
    `platforms` (opcional), `description`, `privacyPath` e, enquanto o subdomínio
    não existir, `live: false` + `fallback`. Se o app tiver domínio próprio, use `ownDomain`.
-3. `npm run build`.
-4. Confira em `npm run dev` e faça commit.
+3. Preencha `en` e `es` (`tag`, `description` e, se houver, `deletion`).
+4. `npm run build`.
+5. Confira em `npm run dev` e faça commit.
 
 ### Adicionar um projeto de cliente
 

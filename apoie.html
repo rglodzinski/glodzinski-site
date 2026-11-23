@@ -11,12 +11,17 @@
 <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/apoie.html">
+<link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/support.html">
+<link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/apoyo.html">
+<link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/support.html">
 <meta property="og:site_name" content="Glodzinski Tecnologia">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://glodzinski.dev.br/assets/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script>(function(){var r=document.documentElement;r.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")r.dataset.theme=t}catch(e){}})();</script>
+<script>(function(){try{var n=navigator;if(n.webdriver||/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(n.userAgent))return;if(localStorage.getItem("lang")||sessionStorage.getItem("langAuto"))return;sessionStorage.setItem("langAuto","1");var cur=document.documentElement.lang.slice(0,2),want="en",ls=n.languages&&n.languages.length?n.languages:[n.language||""];for(var i=0;i<ls.length;i++){var l=String(ls[i]).slice(0,2).toLowerCase();if(l==="pt"||l==="en"||l==="es"){want=l;break}}if(want===cur)return;var alt=document.querySelector('link[rel="alternate"][hreflang^="'+want+'"]');if(alt){var u=new URL(alt.href);location.replace(u.pathname+location.search+location.hash)}}catch(e){}})();</script>
 <!-- /@head -->
 <title>Apoie via Pix — Glodzinski Tecnologia</title>
 <meta name="description" content="Os apps da Glodzinski Tecnologia são gratuitos e sem anúncios. Apoie com qualquer valor via Pix.">
@@ -37,6 +42,7 @@
       <a href="/apoie.html" aria-current="page">Apoie</a>
       <a href="/#contato">Contato</a>
     </nav>
+    <nav class="lang-switch" aria-label="Idioma"><span aria-current="true" lang="pt-BR">PT</span><a href="/en/support.html" hreflang="en" lang="en" title="English" data-lang="en">EN</a><a href="/es/apoyo.html" hreflang="es" lang="es" title="Español" data-lang="es">ES</a></nav>
     <button class="icon-btn theme-toggle" type="button" aria-label="Alternar tema claro ou escuro">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -100,7 +106,7 @@
         <ul>
           <li><a href="/#apps">Aplicativos</a></li>
           <li><a href="/#clientes">Clientes</a></li>
-          <li><a href="/apoie.html">Apoie</a></li>
+          <li><a href="/apoie.html" aria-current="page">Apoie</a></li>
           <li><a href="/#contato">Contato</a></li>
         </ul>
       </div>

@@ -11,12 +11,17 @@
 <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/privacidade.html">
+<link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/privacy.html">
+<link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/privacidad.html">
+<link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/privacy.html">
 <meta property="og:site_name" content="Glodzinski Tecnologia">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://glodzinski.dev.br/assets/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script>(function(){var r=document.documentElement;r.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")r.dataset.theme=t}catch(e){}})();</script>
+<script>(function(){try{var n=navigator;if(n.webdriver||/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(n.userAgent))return;if(localStorage.getItem("lang")||sessionStorage.getItem("langAuto"))return;sessionStorage.setItem("langAuto","1");var cur=document.documentElement.lang.slice(0,2),want="en",ls=n.languages&&n.languages.length?n.languages:[n.language||""];for(var i=0;i<ls.length;i++){var l=String(ls[i]).slice(0,2).toLowerCase();if(l==="pt"||l==="en"||l==="es"){want=l;break}}if(want===cur)return;var alt=document.querySelector('link[rel="alternate"][hreflang^="'+want+'"]');if(alt){var u=new URL(alt.href);location.replace(u.pathname+location.search+location.hash)}}catch(e){}})();</script>
 <!-- /@head -->
 <title>Privacidade — Glodzinski Tecnologia</title>
 <meta name="description" content="Políticas de privacidade dos aplicativos da Glodzinski Tecnologia, privacidade deste site e como exercer seus direitos pela LGPD.">
@@ -37,6 +42,7 @@
       <a href="/apoie.html">Apoie</a>
       <a href="/#contato">Contato</a>
     </nav>
+    <nav class="lang-switch" aria-label="Idioma"><span aria-current="true" lang="pt-BR">PT</span><a href="/en/privacy.html" hreflang="en" lang="en" title="English" data-lang="en">EN</a><a href="/es/privacidad.html" hreflang="es" lang="es" title="Español" data-lang="es">ES</a></nav>
     <button class="icon-btn theme-toggle" type="button" aria-label="Alternar tema claro ou escuro">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -70,9 +76,9 @@
       <p>Cada aplicativo tem sua própria política, que descreve quais dados coleta, para quê e com quem compartilha.</p>
       <ul class="policy-list">
 <!-- @policies -->
-<li><a href="https://tirei.app.br/privacidade" rel="noopener"><img class="app-icon" src="/assets/apps/tirei.png" alt="" width="32" height="32" loading="lazy" decoding="async">Tirei! Amigo Secreto<span class="url">tirei.app.br/privacidade</span></a></li>
-<li><a href="https://combino-web.vercel.app/privacidade/" rel="noopener"><img class="app-icon" src="/assets/apps/combino.png" alt="" width="32" height="32" loading="lazy" decoding="async">Combinô<span class="url">combino-web.vercel.app/privacidade</span></a></li>
-<li><a href="https://auracopa26.app/privacidade" rel="noopener"><img class="app-icon" src="/assets/apps/farmafigurinha.png" alt="" width="32" height="32" loading="lazy" decoding="async">FarmaFigurinha<span class="url">auracopa26.app/privacidade</span></a></li>
+<li><a href="https://tirei.app.br/privacidade" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/tirei.png" alt="" width="32" height="32" loading="lazy" decoding="async">Tirei! Amigo Secreto<span class="url">tirei.app.br/privacidade</span></a></li>
+<li><a href="https://combino-web.vercel.app/privacidade/" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/combino.png" alt="" width="32" height="32" loading="lazy" decoding="async">Combinô<span class="url">combino-web.vercel.app/privacidade</span></a></li>
+<li><a href="https://auracopa26.app/privacidade" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/farmafigurinha.png" alt="" width="32" height="32" loading="lazy" decoding="async">FarmaFigurinha<span class="url">auracopa26.app/privacidade</span></a></li>
 <li><a href="/privacidade.html#limpa-tudo"><img class="app-icon" src="/assets/apps/limpatudo.png" alt="" width="32" height="32" loading="lazy" decoding="async">Limpa Tudo<span class="url">nesta página</span></a></li>
 <!-- /@policies -->
       </ul>
@@ -92,18 +98,18 @@
         <li><strong>Sem cookies, analytics ou rastreadores.</strong> As fontes e imagens são servidas pelo próprio site.</li>
         <li><strong>Formulário de contato:</strong> ele só monta a mensagem no seu navegador e abre o WhatsApp ou seu app de e-mail. Nada é enviado nem armazenado por este site; os dados só chegam até nós se você confirmar o envio, e passam a seguir a política do WhatsApp ou do seu provedor de e-mail.</li>
         <li><strong>Doações via Pix:</strong> o QR Code é fixo e gerado com antecedência. O pagamento acontece inteiramente no app do seu banco; recebemos apenas o que o arranjo Pix informa a qualquer recebedor (nome do pagador e valor).</li>
-        <li><strong>Preferência de tema:</strong> a escolha entre claro e escuro fica guardada só no seu navegador (localStorage).</li>
-        <li><strong>Hospedagem:</strong> GitHub Pages, que pode registrar dados técnicos de acesso (como endereço IP) por motivos de segurança, conforme a <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">declaração de privacidade do GitHub</a>.</li>
+        <li><strong>Preferências:</strong> o tema (claro ou escuro) e o idioma escolhidos ficam guardados só no seu navegador (localStorage). Na primeira visita, o site pode levar você ao idioma do seu navegador; essa verificação acontece no seu navegador e não é enviada a lugar nenhum.</li>
+        <li><strong>Hospedagem:</strong> GitHub Pages, que pode registrar dados técnicos de acesso (como endereço IP) por motivos de segurança, conforme a <a href="https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">declaração de privacidade do GitHub</a>.</li>
       </ul>
 
       <h2 id="direitos">Seus direitos</h2>
       <p>Você pode pedir acesso, correção, portabilidade, anonimização ou exclusão dos seus dados, ou revogar um consentimento, a qualquer momento. Veja como em <a href="/exclusao-de-dados.html">Exclusão de dados</a>, ou fale com o encarregado:</p>
       <ul>
         <li>E-mail: <a href="mailto:suporte@glodzinski.dev.br">suporte@glodzinski.dev.br</a></li>
-        <li>WhatsApp e telefone: <a href="https://wa.me/5548996536602" rel="noopener">+55 (48) 99653-6602</a></li>
+        <li>WhatsApp e telefone: <a href="https://wa.me/5548996536602" rel="noopener" target="_blank">+55 (48) 99653-6602</a></li>
         <li>Correspondência: GLODZINSKI TECNOLOGIA LTDA — Rua Sabino Anísio da Silveira, 401, Campeche, Florianópolis – SC, 88065-033.</li>
       </ul>
-      <p>Respondemos em até 15 dias, como prevê a LGPD. Se não ficar satisfeito, você também pode recorrer à Autoridade Nacional de Proteção de Dados (<a href="https://www.gov.br/anpd" rel="noopener">ANPD</a>).</p>
+      <p>Respondemos em até 15 dias, como prevê a LGPD. Se não ficar satisfeito, você também pode recorrer à Autoridade Nacional de Proteção de Dados (<a href="https://www.gov.br/anpd" rel="noopener" target="_blank">ANPD</a>).</p>
       </article>
     </div>
   </div>
@@ -133,7 +139,7 @@
       <div>
         <h4>Privacidade</h4>
         <ul>
-          <li><a href="/privacidade.html">Políticas de privacidade</a></li>
+          <li><a href="/privacidade.html" aria-current="page">Políticas de privacidade</a></li>
           <li><a href="/exclusao-de-dados.html">Exclusão de dados</a></li>
           <li><a href="mailto:suporte@glodzinski.dev.br">suporte@glodzinski.dev.br</a></li>
           <li><a href="tel:+5548996536602">+55 48 99653-6602</a></li>

@@ -11,12 +11,17 @@
 <link rel="preload" href="/assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
+<link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/">
+<link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/">
+<link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/">
+<link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/">
 <meta property="og:site_name" content="Glodzinski Tecnologia">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://glodzinski.dev.br/assets/brand/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script>(function(){var r=document.documentElement;r.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")r.dataset.theme=t}catch(e){}})();</script>
+<script>(function(){try{var n=navigator;if(n.webdriver||/bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(n.userAgent))return;if(localStorage.getItem("lang")||sessionStorage.getItem("langAuto"))return;sessionStorage.setItem("langAuto","1");var cur=document.documentElement.lang.slice(0,2),want="en",ls=n.languages&&n.languages.length?n.languages:[n.language||""];for(var i=0;i<ls.length;i++){var l=String(ls[i]).slice(0,2).toLowerCase();if(l==="pt"||l==="en"||l==="es"){want=l;break}}if(want===cur)return;var alt=document.querySelector('link[rel="alternate"][hreflang^="'+want+'"]');if(alt){var u=new URL(alt.href);location.replace(u.pathname+location.search+location.hash)}}catch(e){}})();</script>
 <!-- /@head -->
 <title>Glodzinski Tecnologia</title>
 <meta name="description" content="Glodzinski Tecnologia é uma empresa de software de Florianópolis. Desenvolvemos aplicativos próprios e produtos sob encomenda para outras empresas.">
@@ -58,6 +63,7 @@
       <a href="/apoie.html">Apoie</a>
       <a href="/#contato">Contato</a>
     </nav>
+    <nav class="lang-switch" aria-label="Idioma"><span aria-current="true" lang="pt-BR">PT</span><a href="/en/" hreflang="en" lang="en" title="English" data-lang="en">EN</a><a href="/es/" hreflang="es" lang="es" title="Español" data-lang="es">ES</a></nav>
     <button class="icon-btn theme-toggle" type="button" aria-label="Alternar tema claro ou escuro">
       <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
       <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -73,8 +79,8 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1>Software para o dia&nbsp;a&nbsp;dia, feito em Florianópolis.</h1>
-        <p class="lead">A Glodzinski Tecnologia desenvolve aplicativos para celular, web e computador. Publicamos produtos próprios e construímos apps sob encomenda para outras empresas.</p>
+        <h1>Apps que resolvem uma coisa de cada&nbsp;vez.</h1>
+        <p class="lead">A Glodzinski Tecnologia desenvolve aplicativos para celular, web e computador, do Campeche, em Florianópolis. Publicamos produtos próprios e construímos apps sob encomenda para outras empresas.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#apps">Ver aplicativos</a>
           <a class="link-arrow" href="#contato">Falar com a gente</a>
@@ -82,10 +88,10 @@
       </div>
       <nav class="hero-apps" aria-label="Aplicativos">
 <!-- @hero-apps -->
-<a href="https://tirei.app.br" rel="noopener"><img class="app-icon" src="/assets/apps/tirei.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Tirei! Amigo Secreto<small>Amigo secreto</small></span></a>
-<a href="https://combino-web.vercel.app" rel="noopener"><img class="app-icon" src="/assets/apps/combino.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Combinô<small>Família</small></span></a>
-<a href="https://auracopa26.app" rel="noopener"><img class="app-icon" src="/assets/apps/farmafigurinha.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>FarmaFigurinha<small>Figurinhas</small></span></a>
-<a href="https://rglodzinski.github.io/LimpaTudo" rel="noopener"><img class="app-icon" src="/assets/apps/limpatudo.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Limpa Tudo<small>Utilitário</small></span></a>
+<a href="https://tirei.app.br" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/tirei.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Tirei! Amigo Secreto<small>Amigo secreto</small></span></a>
+<a href="https://combino-web.vercel.app" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/combino.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Combinô<small>Família</small></span></a>
+<a href="https://auracopa26.app" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/farmafigurinha.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>FarmaFigurinha<small>Figurinhas</small></span></a>
+<a href="https://limpatudo.glodzinski.dev.br" rel="noopener" target="_blank"><img class="app-icon" src="/assets/apps/limpatudo.png" alt="" width="56" height="56" loading="lazy" decoding="async"><span>Limpa Tudo<small>Utilitário</small></span></a>
 <!-- /@hero-apps -->
       </nav>
     </div>
@@ -106,8 +112,8 @@
     <p>Amigo secreto sem papelzinho: sorteio com restrições, um link individual para cada participante e lista de desejos.</p>
   </div>
   <div class="app-meta">
-    <a href="https://tirei.app.br" rel="noopener" aria-label="Site do Tirei! Amigo Secreto">Site ↗</a>
-    <a href="https://tirei.app.br/privacidade" rel="noopener">Privacidade</a>
+    <a href="https://tirei.app.br" rel="noopener" aria-label="Site do Tirei! Amigo Secreto" target="_blank">Site ↗</a>
+    <a href="https://tirei.app.br/privacidade" rel="noopener" target="_blank">Privacidade</a>
     <a href="/?app=Tirei#contato">Suporte</a>
   </div>
 </li>
@@ -118,8 +124,8 @@
     <p>Rotinas, combinados, recompensas e tempo de tela das crianças, organizados pela família num só lugar.</p>
   </div>
   <div class="app-meta">
-    <a href="https://combino-web.vercel.app" rel="noopener" aria-label="Site do Combinô">Site ↗</a>
-    <a href="https://combino-web.vercel.app/privacidade/" rel="noopener">Privacidade</a>
+    <a href="https://combino-web.vercel.app" rel="noopener" aria-label="Site do Combinô" target="_blank">Site ↗</a>
+    <a href="https://combino-web.vercel.app/privacidade/" rel="noopener" target="_blank">Privacidade</a>
     <a href="/?app=Combin%C3%B4#contato">Suporte</a>
   </div>
 </li>
@@ -130,8 +136,8 @@
     <p>Organize o álbum de figurinhas, marque as repetidas e encontre colecionadores para trocar.</p>
   </div>
   <div class="app-meta">
-    <a href="https://auracopa26.app" rel="noopener" aria-label="Site do FarmaFigurinha">Site ↗</a>
-    <a href="https://auracopa26.app/privacidade" rel="noopener">Privacidade</a>
+    <a href="https://auracopa26.app" rel="noopener" aria-label="Site do FarmaFigurinha" target="_blank">Site ↗</a>
+    <a href="https://auracopa26.app/privacidade" rel="noopener" target="_blank">Privacidade</a>
     <a href="/?app=FarmaFigurinha#contato">Suporte</a>
   </div>
 </li>
@@ -142,7 +148,7 @@
     <p>Encontra e remove caches de desenvolvimento, do sistema e de apps comuns, sempre com a sua confirmação.</p>
   </div>
   <div class="app-meta">
-    <a href="https://rglodzinski.github.io/LimpaTudo" rel="noopener" aria-label="Site do Limpa Tudo">Site ↗</a>
+    <a href="https://limpatudo.glodzinski.dev.br" rel="noopener" aria-label="Site do Limpa Tudo" target="_blank">Site ↗</a>
     <a href="/privacidade.html#limpa-tudo">Privacidade</a>
     <a href="/?app=Limpa%20Tudo#contato">Suporte</a>
   </div>
@@ -166,7 +172,7 @@
     <h3>iPraHoje <small>Descoberta local</small></h3>
     <p>Guia de bares, restaurantes e casas noturnas abertos agora, com filtros como música ao vivo e espaço kids.</p>
   </div>
-  <div class="app-meta"><a href="https://iprahoje.com.br" rel="noopener">iprahoje.com.br ↗</a></div>
+  <div class="app-meta"><a href="https://iprahoje.com.br" rel="noopener" target="_blank">iprahoje.com.br ↗</a></div>
 </li>
 <li class="app-row">
   <img class="app-icon" src="/assets/apps/luxb.png" alt="" width="48" height="48" loading="lazy" decoding="async">
@@ -174,7 +180,7 @@
     <h3>LuxB <small>Aluguel de itens</small></h3>
     <p>App para alugar e emprestar itens com segurança, com pagamentos, avaliações e chat entre as partes.</p>
   </div>
-  <div class="app-meta"><a href="https://luxbapp.com" rel="noopener">luxbapp.com ↗</a></div>
+  <div class="app-meta"><a href="https://luxbapp.com" rel="noopener" target="_blank">luxbapp.com ↗</a></div>
 </li>
 <!-- /@clients -->
       </ul>
@@ -227,7 +233,7 @@
       </div>
       <div class="contact">
         <dl class="channels">
-          <div><dt>WhatsApp e telefone</dt><dd><a href="https://wa.me/5548996536602" rel="noopener">+55 48 99653-6602</a></dd></div>
+          <div><dt>WhatsApp e telefone</dt><dd><a href="https://wa.me/5548996536602" rel="noopener" target="_blank">+55 48 99653-6602</a></dd></div>
           <div><dt>E-mail</dt><dd><a href="mailto:suporte@glodzinski.dev.br">suporte@glodzinski.dev.br</a></dd></div>
           <div><dt>Endereço</dt><dd>Rua Sabino Anísio da Silveira, 401, Campeche<br>Florianópolis, SC · 88065-033</dd></div>
         </dl>

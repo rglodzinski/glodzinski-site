@@ -36,7 +36,7 @@ flowchart TB
 
 | App | Subdomínio planejado | DNS | Endereço atual (`fallback`) |
 |---|---|---|---|
-| Limpa Tudo | `limpatudo.glodzinski.dev.br` | ⏳ em implementação | `rglodzinski.github.io/LimpaTudo` |
+| Limpa Tudo | `limpatudo.glodzinski.dev.br` | ✅ no ar (HTTPS) | — (`live: true`; política em `/privacidade.html#limpa-tudo`) |
 | Combinô | `combino.glodzinski.dev.br` | ⏳ | `combino-web.vercel.app` |
 | FarmaFigurinha | `farmafigurinha.glodzinski.dev.br` | ⏳ | `auracopa26.app` |
 | Tirei! | — (domínio próprio) | ✅ | `tirei.app.br` |

@@ -143,4 +143,7 @@ H3 1,125rem; legendas 0,8125rem.
 - **Transparente sobre dados:** dizer o que coleta, por que e como apagar.
 - **Doações sem pressão:** "o valor é livre", "doar não libera recursos extras".
 
-Assinatura: **"Software para o dia a dia, feito em Florianópolis."**
+Assinatura: **"Apps que resolvem uma coisa de cada vez."** (EN: "Apps that
+solve one thing at a time." · ES: "Apps que resuelven una cosa a la vez.").
+Retoma o princípio da seção A empresa ("preferimos apps que fazem uma coisa
+bem feita"); Florianópolis aparece na frase seguinte, não na assinatura.
