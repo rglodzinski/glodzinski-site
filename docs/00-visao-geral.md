@@ -52,12 +52,15 @@ flowchart TD
 ├── CNAME, .nojekyll          # GitHub Pages
 ├── partials/                 # head, header e footer compartilhados
 ├── assets/
-│   ├── brand/                # logos, ícone 512, og-image
-│   ├── fonts/                # Space Grotesk e Inter (self-hosted, OFL)
+│   ├── apps/                 # ícones oficiais dos apps (192px)
+│   ├── brand/                # logotipo, símbolo, ícone 512, og-image
+│   ├── fonts/                # Inter e Inter Tight (self-hosted, OFL)
 │   ├── js/main.js            # tema, menu, copiar Pix, formulário
 │   └── pix/                  # qr.svg + payload.txt (gerados)
 ├── scripts/
 │   ├── apps.mjs              # catálogo de apps (fonte única)
+│   ├── make-logo.cjs         # gera o logotipo a partir da fonte (npm run logo)
+│   ├── fonts/                # Inter Tight Bold (.woff) usada pelo gerador do logo
 │   ├── build.mjs             # injeta parciais e blocos gerados
 │   ├── pix.config.mjs        # chave, nome, cidade, txid
 │   ├── pix.mjs               # BR Code (porta do Limpa Tudo)

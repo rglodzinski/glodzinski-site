@@ -34,17 +34,6 @@
   // ---- Ano no rodapé ----
   document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
 
-  // ---- Animação de entrada ----
-  const items = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-    }, { rootMargin: "0px 0px -8% 0px" });
-    items.forEach((el) => io.observe(el));
-  } else {
-    items.forEach((el) => el.classList.add("in"));
-  }
-
   // ---- Pix copia e cola ----
   async function copy(text) {
     try { await navigator.clipboard.writeText(text); return true; } catch { /* fallback abaixo */ }
@@ -58,11 +47,11 @@
   }
   document.querySelectorAll("[data-pix-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
-      const card = btn.closest(".pix-card");
+      const card = btn.closest("[data-pix]");
       const payload = card.querySelector(".pix-code").textContent.trim();
       const msg = card.querySelector(".copied-msg");
       const ok = await copy(payload);
-      msg.textContent = ok ? "Código copiado! Cole no app do seu banco, em Pix › Copia e Cola." : "Não deu para copiar — selecione o código acima.";
+      msg.textContent = ok ? "Código copiado. Cole no app do seu banco, em Pix Copia e Cola." : "Não foi possível copiar. Selecione o código acima.";
     });
   });
 

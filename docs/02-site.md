@@ -4,6 +4,8 @@
 
 - **Estático e sem framework:** HTML/CSS/JS puros, carregamento instantâneo,
   nada para atualizar.
+- **Visual sóbrio:** layout editorial (listas com fios finos), sem gradientes,
+  sombras decorativas ou animações; a cor vem dos ícones dos apps.
 - **Sem rastreamento:** sem cookies, analytics nem recursos de terceiros
   (as fontes são locais).
 - **Funciona sem JavaScript:** o JS só adiciona tema, menu mobile, copiar Pix
@@ -35,6 +37,7 @@ flowchart LR
 | `<!-- @head -->` | `partials/head.html` | todas |
 | `<!-- @header -->` | `partials/header.html` (+ `aria-current` na página atual) | todas |
 | `<!-- @footer -->` | `partials/footer.html` | todas |
+| `<!-- @hero-apps -->` | `APPS` (ícones no topo) | index |
 | `<!-- @apps -->` | `APPS` em `scripts/apps.mjs` | index |
 | `<!-- @clients -->` | `CLIENT_PROJECTS` | index |
 | `<!-- @app-options -->` | `APPS` (select do formulário) | index |
@@ -49,16 +52,17 @@ gerado é commitado, então o GitHub Pages serve tudo sem precisar de CI.
 
 ### Adicionar um app próprio
 
-1. Acrescente um item em `APPS` (`scripts/apps.mjs`): `slug`, `name`, `tag`,
-   `initials`, `colors`, `description`, `privacyPath` e, enquanto o subdomínio
+1. Coloque o ícone oficial do app em `assets/apps/<slug>.png` (quadrado, 192×192,
+   sem cantos arredondados; o CSS arredonda).
+2. Acrescente um item em `APPS` (`scripts/apps.mjs`): `slug`, `name`, `icon`, `tag`,
+   `platforms` (opcional), `description`, `privacyPath` e, enquanto o subdomínio
    não existir, `live: false` + `fallback`. Se o app tiver domínio próprio, use `ownDomain`.
-2. `npm run build`.
-3. Confira em `npm run dev` e faça commit.
+3. `npm run build`.
+4. Confira em `npm run dev` e faça commit.
 
 ### Adicionar um projeto de cliente
 
-Acrescente em `CLIENT_PROJECTS` (só `name`, `initials`, `colors`, `tag`,
-`description`, `site`) e rode `npm run build`. Não entra em política nem no
+Acrescente em `CLIENT_PROJECTS` (`name`, `icon`, `tag`, `description`, `site`) e rode `npm run build`. Não entra em política nem no
 formulário de contato.
 
 ### Mudar menu ou rodapé

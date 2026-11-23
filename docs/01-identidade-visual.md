@@ -1,134 +1,146 @@
 # Identidade visual — Glodzinski Tecnologia
 
+> Versão 2 (23/11/2026). A v1 (símbolo "G" com gradiente azul-petróleo e ponto
+> coral) foi descartada: lembrava o logo do Google e o site tinha aparência de
+> template genérico.
+
 ## Conceito
 
-**“Software do Campeche.”** Uma empresa pequena, de Florianópolis, que faz
-apps simples e honestos. A marca junta dois elementos do lugar:
+**Uma empresa de software pequena e séria.** A marca é tipográfica e
+contida, para não competir com os produtos. Quem traz a cor são os ícones dos
+apps; a marca da empresa fica em preto e branco, com um único detalhe de cor.
 
-- **Oceano** (azul-petróleo): confiança, calma, tecnologia sem frieza;
-- **Pôr do sol** (coral): o toque humano, usado com parcimônia, como um acento.
-
-Referências de estilo: produtos “tech tool” limpos (Linear, Vercel, Raycast),
-com mais calor e personalidade local.
+Referências: estúdios de software e editoras independentes. Sites com
+tipografia forte, listas bem alinhadas, fios finos e quase nenhum ornamento.
 
 ```mermaid
-mindmap
-  root((Glodzinski))
-    Simples
-      Uma tarefa por app
-      Interfaces limpas
-    Privado
-      Mínimo de dados
-      Sem rastreadores
-    Humano
-      Suporte direto
-      Feito no Campeche
-    Oceano e sol
-      Azul-petróleo
-      Coral como acento
+flowchart LR
+    A[Tipografia<br>Inter Tight] --> M((glodzinski.))
+    B[Ponto final quadrado<br>vermelhão] --> M
+    C[Pingos quadrados<br>nos dois i] --> M
+    M --> D[Logotipo]
+    M --> E[Símbolo g.]
 ```
 
-## Logo
+## Logotipo
+
+![logotipo](../assets/brand/logo.svg)
+
+`glodzinski.`, todo em minúsculas, em **Inter Tight Bold** convertida em
+contornos. Tem dois detalhes próprios:
+
+1. **Pingos quadrados** nos dois "i", no lugar dos redondos da fonte.
+2. **Ponto final quadrado em vermelhão**, como o fim de uma frase: a empresa
+   diz o que faz e para por aí. O quadrado também lembra um pixel ou um cursor.
+
+O nome vem sem "Tecnologia": o logotipo é a marca, e a razão social aparece
+por extenso onde for necessário (rodapé, documentos).
+
+## Símbolo
+
+![símbolo](../assets/brand/mark.svg)
+
+O **"g." minúsculo** com o ponto quadrado, num quadrado preto. É usado como
+favicon, avatar e ícone, onde o logotipo inteiro não cabe.
+
+Ele foi pensado para se afastar do Google: "g" minúsculo de dois andares em
+vez de "G" maiúsculo circular, uma cor só em vez de quatro, ponto quadrado
+e não redondo.
+
+## Arquivos
 
 | Arquivo | Uso |
 |---|---|
-| `assets/brand/logo-mark.svg` | Símbolo: ícone de app, favicon, avatar de redes |
-| `assets/brand/logo-mark-mono.svg` | Símbolo monocromático (`currentColor`), para carimbos e fundos de foto |
-| `assets/brand/logo-full.svg` | Símbolo + wordmark, fundo claro |
-| `assets/brand/logo-full-dark.svg` | Símbolo + wordmark, fundo escuro |
-| `assets/brand/logo-mark-512.png` | PNG para lojas, perfis, documentos |
-| `assets/brand/og-image.png` (+ `.svg`) | Imagem de compartilhamento (1200×630) |
+| `assets/brand/logo.svg` | Logotipo sobre fundo claro (preto + vermelhão) |
+| `assets/brand/logo-white.svg` | Logotipo sobre fundo escuro ou foto |
+| `assets/brand/logo-mono.svg` | Uma cor só (`currentColor`): carimbo, gravação, fax |
+| `assets/brand/mark.svg` | Símbolo: quadrado preto, "g" branco, ponto vermelhão |
+| `assets/brand/mark-light.svg` | Símbolo em fundo branco |
+| `assets/brand/mark-mono.svg` | Símbolo sem fundo, uma cor |
+| `assets/brand/mark-512.png` | Perfis, lojas, documentos |
+| `favicon.svg`, `apple-touch-icon.png` | Navegador e atalho no iOS |
+| `assets/brand/og-image.png` | Prévia em links compartilhados (1200×630) |
 
-**Símbolo:** um **G** de traço único e arredondado, como uma onda que fecha e
-volta para dentro, num quadrado de cantos suaves (raio 16/64) com gradiente
-oceano. O **ponto coral** no alto é o sol nascendo no Campeche e também o
-“ponto” de um cursor: o momento em que algo começa.
+Todos os SVGs são gerados por `npm run logo` (`scripts/make-logo.cjs`), a partir
+de `scripts/fonts/intertight-700.woff`. Para ajustar espaçamento, tamanho do
+ponto ou cores, edite o script e rode de novo. Não edite os SVGs à mão.
 
-**Wordmark:** `glodzinski` em minúsculas, Space Grotesk Bold, tracking −0,6;
-abaixo, `TECNOLOGIA` em caixa alta, peso 500, tracking largo (≈ 0,25em), cor oceano.
+No site, o logotipo é inserido inline pelo build: as letras usam
+`currentColor` e o ponto usa `var(--accent)`, então o logotipo acompanha o
+tema claro ou escuro.
 
-**Regras:**
+## Regras de uso
 
-- Área de proteção: no mínimo ¼ da largura do símbolo em todos os lados.
-- Tamanho mínimo: símbolo com 16 px; logo completo com 120 px de largura.
-- Não distorcer, girar, trocar as cores do gradiente, contornar o símbolo ou
-  colocar o ponto coral em outra posição.
-- Sobre fotos ou fundos coloridos, use o símbolo monocromático em branco.
-
-Os textos dos SVGs usam a fonte Space Grotesk. Para peças fora da web
-(impressão, Figma), instale a fonte ou converta o texto em contornos.
+- **Área de proteção:** a altura do "g" em volta do logotipo.
+- **Tamanho mínimo:** logotipo com 72px de largura; símbolo com 16px.
+- **O ponto é sempre quadrado e vermelhão** (ou da mesma cor do texto, na
+  versão monocromática). Não troque por círculo, não mude de cor.
+- Não aplique gradiente, sombra, contorno ou outra fonte.
+- Não use "Glodzinski Tecnologia" ao lado do logotipo como se fosse parte dele.
 
 ## Cores
 
-### Marca
+A paleta é neutra de propósito.
 
-| Nome | Hex | Uso |
-|---|---|---|
-| **Oceano** | `#0E7C86` | Cor principal: botões, links, destaques |
-| **Oceano profundo** | `#0B5563` | Hover, início do gradiente |
-| **Lagoa** | `#14A3A8` | Fim do gradiente do símbolo |
-| **Coral** (pôr do sol) | `#FF7A59` | Acento decorativo: ponto do logo, marcadores, brilhos. **Nunca em texto.** |
-| **Tinta** | `#0B1B2B` | Texto principal no claro |
-| **Areia** | `#FBFAF7` | Fundo no claro |
-
-Gradiente oficial: `linear-gradient(135deg, #14A3A8 → #0B5563)` no símbolo; nos
-blocos de destaque, `#0B5563 → #0E7C86 → #14A3A8`.
-
-### Tokens do site (claro e escuro)
-
-| Token | Claro | Escuro | Uso |
+| Nome | Claro | Escuro | Uso |
 |---|---|---|---|
-| `--bg` | `#FBFAF7` | `#071318` | Fundo da página |
-| `--surface` | `#FFFFFF` | `#0D1F26` | Cards, seções alternadas |
-| `--surface-2` | `#F3F1EC` | `#132A33` | Hover, chips |
-| `--border` | `#E5E1D8` | `#1F3A44` | Bordas e divisórias |
-| `--text` | `#0B1B2B` | `#EAF2F3` | Texto principal |
-| `--muted` | `#55606E` | `#9AB0B6` | Texto secundário |
-| `--brand` | `#0E7C86` | `#5FD3D3` | Ações, links |
-| `--brand-strong` | `#0B5563` | `#8BE3E0` | Hover |
-| `--brand-soft` | `#DDF3F2` | `#0F3B40` | Fundo de ícones |
-| `--on-brand` | `#FFFFFF` | `#04211F` | Texto sobre `--brand` |
+| **Tinta** | `#111316` | `#ECECEA` | Texto, logotipo, botão principal |
+| **Papel** | `#FFFFFF` | `#0F1012` | Fundo |
+| **Superfície** | `#F6F6F4` | `#17181B` | Blocos de destaque, notas |
+| **Fio** | `#E4E4E0` | `#26282C` | Linhas e bordas |
+| **Cinza** | `#5E636B` | `#A0A4AB` | Texto secundário |
+| **Cinza claro** | `#6E737B` | `#80848B` | Legendas, metadados |
+| **Vermelhão** | `#C93F1B` | `#FF6A3D` | Ponto do logo, erros, foco, detalhes pontuais |
 
-**Contraste (WCAG AA):** Oceano `#0E7C86` sobre Areia ≈ 4,7:1, e texto branco
-sobre Oceano ≈ 4,9:1, ambos OK para texto normal. O coral não tem contraste
-suficiente para texto e por isso é só decorativo.
+Tokens no CSS: `--text`, `--bg`, `--surface`, `--line`, `--line-strong`,
+`--muted`, `--faint`, `--accent`, `--btn-bg`, `--btn-fg`.
 
-### Cores dos apps
+**Contraste (WCAG AA, texto normal ≥ 4,5:1):** Tinta/Papel ≈ 18:1;
+Cinza/Papel ≈ 6:1; Cinza claro/Papel ≈ 4,7:1; Vermelhão/Papel ≈ 5:1.
 
-Cada app mantém a identidade própria. No site, aparecem num ícone com
-gradiente e iniciais, definido em `scripts/apps.mjs` (`colors`).
+**Vermelhão com parcimônia:** aparece no ponto do logo, no sublinhado do
+item ativo do menu, nos números dos passos, no foco do teclado e nos
+erros. Não use em botões, fundos ou títulos.
 
 ## Tipografia
 
-| Papel | Fonte | Pesos | Observação |
+| Papel | Fonte | Peso | Detalhes |
 |---|---|---|---|
-| Títulos e wordmark | **Space Grotesk** | 500–700 | Geométrica, técnica e amigável; tracking −0,02em |
-| Texto e interface | **Inter** | 400–600 | Legível em tamanhos pequenos |
-| Código (Pix copia e cola) | `ui-monospace` | 500 | Fonte do sistema |
+| Logotipo | Inter Tight | 700 | Em contornos (SVG) |
+| Títulos | Inter Tight | 600 | tracking −0,012em (H1 −0,018em), entrelinha 1,08–1,1 |
+| Texto e interface | Inter | 400–500 | 16px / 1,6, alternativas `cv11` e `ss01` |
+| Código (Pix) | Monoespaçada do sistema | 400 | |
 
-Ambas sob licença SIL OFL, **servidas pelo próprio site** (`assets/fonts/`), sem
-Google Fonts, para não enviar o IP do visitante a terceiros.
+As duas fontes (SIL OFL) são servidas pelo próprio site (`assets/fonts/`),
+sem Google Fonts.
 
-Escala: H1 `clamp(2.1rem, 5.5vw, 3.6rem)`, H2 `clamp(1.6rem, 3.5vw, 2.2rem)`,
-corpo 16px/1.65. O “eyebrow” (rótulo acima dos títulos) usa caixa alta, 0,78rem,
-tracking 0,14em, cor oceano e um ponto coral.
+Escala: H1 `clamp(2.25rem, 5vw, 3.5rem)`; H2 `clamp(1.5rem, 2.6vw, 2rem)`;
+H3 1,125rem; legendas 0,8125rem.
 
-## Formas e componentes
+## Layout e componentes
 
-- **Raios:** 16px em cards, 10px em campos, 999px (pílula) em botões e chips,
-  24px nos blocos de destaque.
-- **Sombra:** suave e longa (`0 8px 24px -12px`), nunca dura.
-- **Ícones:** traço de 2px, cantos arredondados (estilo Lucide), desenhados em SVG inline.
-- **Movimento:** entrada sutil (fade + 12px) ao rolar; respeita
-  `prefers-reduced-motion`.
-- **Ondas:** motivo gráfico opcional (veja `og-image.svg`) para peças de divulgação.
+- **Grade:** largura máxima de 1120px, margens de 16px (celular) e 32px (desktop).
+- **Seções:** começam com um **fio preto de 1px** e o título à esquerda, com a
+  descrição numa segunda coluna, à direita. Esse padrão editorial substitui
+  os rótulos coloridos e os cards.
+- **Listas em vez de cards:** os apps aparecem em linhas separadas por fios,
+  com ícone, nome, categoria e plataformas, descrição e links.
+- **Ícones dos apps:** sempre o ícone oficial, com cantos de 22,5% (como no
+  iOS) e um contorno interno sutil, para ícones claros não sumirem no fundo
+  branco.
+- **Botões:** cantos de 8px (não pílula), 44px de altura. O principal é
+  preenchido com a cor Tinta; o secundário tem só contorno. Links de ação
+  usam uma seta "→".
+- **Campos:** cantos de 8px e borda Fio; no foco, a borda vira Tinta.
+- **Sem:** gradientes, brilhos, sombras decorativas, emojis, animações de
+  entrada ou ícones ilustrativos genéricos.
 
 ## Voz e tom
 
-- **Direta e próxima:** “Fale com a gente”, não “Entre em contato conosco”.
-- **Honesta sobre dados:** dizer o que coleta e por quê, sem juridiquês
-  quando não for preciso.
-- **Sem pressão:** doação é “qualquer valor ajuda”; nunca culpa ou urgência.
-- **Local sem exagero:** “Feito no Campeche, Florianópolis” no rodapé basta.
+- **Factual e direta.** "Desenvolvemos aplicativos para celular, web e
+  computador", e não "Transformamos ideias em experiências".
+- **Primeira pessoa do plural**, sem superlativos.
+- **Transparente sobre dados:** dizer o que coleta, por que e como apagar.
+- **Doações sem pressão:** "o valor é livre", "doar não libera recursos extras".
 
-Assinatura: **“Apps simples para o dia a dia.”**
+Assinatura: **"Software para o dia a dia, feito em Florianópolis."**

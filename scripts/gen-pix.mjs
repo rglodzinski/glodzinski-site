@@ -11,7 +11,7 @@ const svg = await QRCode.toString(payload, {
   type: "svg",
   margin: 1,
   errorCorrectionLevel: "M",
-  color: { dark: "#0B1B2B", light: "#FFFFFF" },
+  color: { dark: "#111316", light: "#FFFFFF" },
 });
 
 await mkdir("assets/pix", { recursive: true });
