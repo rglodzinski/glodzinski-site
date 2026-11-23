@@ -39,7 +39,7 @@ flowchart TB
 | Limpa Tudo | `limpatudo.glodzinski.dev.br` | ✅ no ar (HTTPS) | — (`live: true`; política em `/privacidade.html#limpa-tudo`) |
 | FarmaFigurinha | `farmafigurinha.glodzinski.dev.br` | ⏳ | `auracopa26.app` |
 | Tirei! | — (domínio próprio) | ✅ | `tirei.app.br` |
-| Combinô | — (domínio próprio) | ⏳ DNS no Registro.br | `combino.app.br` (Vercel; `combino-web.vercel.app` continua respondendo) |
+| Combinô | — (domínio próprio) | ✅ | `combino.app.br` (Vercel; `combino-web.vercel.app` continua respondendo) |
 
 ## Como ativar um subdomínio
 
