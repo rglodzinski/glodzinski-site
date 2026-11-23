@@ -6,7 +6,7 @@
 export const SITE = "https://glodzinski.dev.br";
 
 export const LANGS = {
-  pt: { dir: "", html: "pt-BR", og: "pt_BR", label: "Português", short: "PT" },
+  pt: { dir: "", html: "pt-BR", og: "pt_BR", label: "Português (Brasil)", short: "BR" },
   en: { dir: "en", html: "en", og: "en_US", label: "English", short: "EN" },
   es: { dir: "es", html: "es", og: "es_ES", label: "Español", short: "ES" },
 };
@@ -56,7 +56,6 @@ export const T = {
     company: "Empresa",
     policies: "Políticas de privacidade",
     deletion: "Exclusão de dados",
-    country: "Florianópolis, Brasil",
     site: "Site ↗",
     siteOf: (n) => `Site do ${n}`,
     help: "Suporte",
@@ -79,7 +78,6 @@ export const T = {
     company: "Company",
     policies: "Privacy policies",
     deletion: "Data deletion",
-    country: "Florianópolis, Brazil",
     site: "Website ↗",
     siteOf: (n) => `${n} website`,
     help: "Support",
@@ -102,7 +100,6 @@ export const T = {
     company: "Empresa",
     policies: "Políticas de privacidad",
     deletion: "Eliminación de datos",
-    country: "Florianópolis, Brasil",
     site: "Sitio ↗",
     siteOf: (n) => `Sitio de ${n}`,
     help: "Soporte",

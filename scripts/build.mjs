@@ -11,6 +11,15 @@ import { readFile, writeFile, readdir } from "node:fs/promises";
 import { APPS, CLIENT_PROJECTS, links, tr } from "./apps.mjs";
 import { DEFAULT_LANG, LANGS, PAGES, SITE, T, localize, pageOf, urlOf } from "./i18n.mjs";
 
+// Bandeiras do seletor de idioma (SVG inline: emojis de bandeira não aparecem
+// no Windows). BR = Brasil, EN = Estados Unidos, ES = Espanha.
+const flag = (body) => `<svg class="flag" viewBox="0 0 20 14" aria-hidden="true" focusable="false">${body}</svg>`;
+const FLAGS = {
+  pt: flag(`<rect width="20" height="14" fill="#009C3B"/><path d="M10 1.6 18.2 7 10 12.4 1.8 7Z" fill="#FFDF00"/><circle cx="10" cy="7" r="3.1" fill="#002776"/><path d="M6.98 6.3q3.2-.5 6 1.3" stroke="#fff" stroke-width=".55" fill="none"/>`),
+  en: flag(`<rect width="20" height="14" fill="#fff"/><path d="M0 0h20v1.08H0zm0 2.15h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20v1.07H0zm0 2.15h20v1.08H0zm0 2.15h20v1.08H0zm0 2.16h20V14H0z" fill="#B22234"/><rect width="8.8" height="7.54" fill="#3C3B6E"/>`),
+  es: flag(`<rect width="20" height="14" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/>`),
+};
+
 const esc = (v) => String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 const isExt = (url) => url.startsWith("http");
 const host = (url) => url.replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -104,10 +113,12 @@ function render(template, file, lang, page) {
       ].join("\n")
     : "";
   const langSwitch = `<nav class="lang-switch" aria-label="${t.langLabel}">${Object.entries(LANGS)
-    .map(([l, L]) =>
-      l === lang
-        ? `<span aria-current="true" lang="${L.html}">${L.short}</span>`
-        : `<a href="${urlOf(files[l])}" hreflang="${L.html}" lang="${L.html}" title="${L.label}" data-lang="${l}">${L.short}</a>`)
+    .map(([l, L]) => {
+      const inner = `${FLAGS[l]}<span>${L.short}</span>`;
+      return l === lang
+        ? `<span class="lang" aria-current="true" lang="${L.html}" title="${L.label}">${inner}</span>`
+        : `<a class="lang" href="${urlOf(files[l])}" hreflang="${L.html}" lang="${L.html}" title="${L.label}" aria-label="${L.label}" data-lang="${l}">${inner}</a>`;
+    })
     .join("")}</nav>`;
   let out = template
     .replaceAll("{{alternates}}", alternates)

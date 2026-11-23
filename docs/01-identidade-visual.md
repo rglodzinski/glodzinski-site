@@ -146,4 +146,8 @@ H3 1,125rem; legendas 0,8125rem.
 Assinatura: **"Apps que resolvem uma coisa de cada vez."** (EN: "Apps that
 solve one thing at a time." · ES: "Apps que resuelven una cosa a la vez.").
 Retoma o princípio da seção A empresa ("preferimos apps que fazem uma coisa
-bem feita"); Florianópolis aparece na frase seguinte, não na assinatura.
+bem feita").
+
+O site não mostra cidade, bairro nem endereço: a empresa se identifica pela
+razão social e pelo CNPJ. (A cidade só aparece dentro do código Pix, onde é
+campo obrigatório do padrão.)

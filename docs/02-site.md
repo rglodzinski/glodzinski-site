@@ -65,7 +65,9 @@ O site tem três versões: português na raiz, inglês em `/en/` e espanhol em
   em português. Os apps têm `en`/`es` em `scripts/apps.mjs`.
 - **Partials** usam `{{t.chave}}` e `{{href:página}}`; o build preenche cada um
   no idioma da página e gera os `<link rel="alternate" hreflang>` (com
-  `x-default` → inglês) e o seletor PT · EN · ES no cabeçalho.
+  `x-default` → inglês) e o seletor BR · EN · ES no cabeçalho, com bandeiras em SVG
+  (Brasil, Estados Unidos, Espanha; ficam em `FLAGS`, no `scripts/build.mjs`).
+  Emojis de bandeira não aparecem no Windows, por isso o SVG.
 - **Idioma do navegador:** na primeira visita, um script no `<head>` leva ao
   idioma do navegador (pt, en ou es; qualquer outro → en). Não age em robôs de
   busca (para não esconder as páginas em português do Google), nem mais de uma
