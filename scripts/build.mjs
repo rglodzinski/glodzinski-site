@@ -6,6 +6,7 @@
 // @policies, @app-options e @deletion, e preenche o "Pix copia e cola" com
 // assets/pix/payload.txt (gerado por `npm run pix`).
 // Idiomas e mapa de páginas: scripts/i18n.mjs. Ver docs/02-site.md.
+// Também gera robots.txt e sitemap.xml (com hreflang) a partir de PAGES.
 // Uso: npm run build   (rode depois de editar partials/, apps.mjs ou i18n.mjs)
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import { APPS, CLIENT_PROJECTS, links, tr } from "./apps.mjs";
@@ -174,3 +175,22 @@ for (const file of files) {
   await writeFile(file, html);
   console.log("ok", file);
 }
+
+// SEO: sitemap com as alternativas de idioma de cada página, e robots.txt
+// apontando para ele (o Limpa Tudo tem robots e sitemap no próprio subdomínio).
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${Object.values(PAGES)
+  .flatMap((files) =>
+    Object.values(files).map((f) => `  <url>
+    <loc>${SITE}${urlOf(f)}</loc>
+${Object.entries(files).map(([l, g]) => `    <xhtml:link rel="alternate" hreflang="${LANGS[l].html}" href="${SITE}${urlOf(g)}"/>`).join("\n")}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${urlOf(files[DEFAULT_LANG])}"/>
+  </url>`),
+  )
+  .join("\n")}
+</urlset>
+`;
+await writeFile("sitemap.xml", sitemap);
+await writeFile("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+console.log("ok sitemap.xml, robots.txt");

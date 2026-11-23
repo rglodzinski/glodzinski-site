@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://glodzinski.dev.br/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/apoie.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/apoie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/apoyo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/en/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/apoie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/apoyo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/es/apoyo.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/apoie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/apoyo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/privacidade.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/es/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/exclusao-de-dados.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/exclusao-de-dados.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/eliminacion-de-datos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/en/data-deletion.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/exclusao-de-dados.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/eliminacion-de-datos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+  </url>
+  <url>
+    <loc>https://glodzinski.dev.br/es/eliminacion-de-datos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://glodzinski.dev.br/exclusao-de-dados.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://glodzinski.dev.br/es/eliminacion-de-datos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://glodzinski.dev.br/en/data-deletion.html"/>
+  </url>
+</urlset>

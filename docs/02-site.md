@@ -87,6 +87,13 @@ O build acrescenta `target="_blank" rel="noopener"` a todo link para outro
 site (inclusive os escritos à mão nas páginas). `mailto:`, `tel:` e links
 internos abrem na mesma aba.
 
+## SEO
+
+O build gera `robots.txt` e `sitemap.xml` (cada página com as alternativas
+pt-BR/en/es e x-default) a partir de `PAGES` em `scripts/i18n.mjs`; página nova
+entra no sitemap ao ser adicionada ali. O domínio está no Google Search Console
+(propriedade de domínio `glodzinski.dev.br`) e no Bing Webmaster Tools.
+
 ## Tarefas comuns
 
 ### Adicionar um app próprio
